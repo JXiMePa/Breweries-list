@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B5FB5C12541EB880024DDC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C02541EB880024DDC4 /* AppDelegate.swift */; };
 		6B5FB5C32541EB880024DDC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C22541EB880024DDC4 /* SceneDelegate.swift */; };
-		6B5FB5C52541EB880024DDC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C42541EB880024DDC4 /* ViewController.swift */; };
+		6B5FB5C52541EB880024DDC4 /* BreweriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C42541EB880024DDC4 /* BreweriesListViewController.swift */; };
 		6B5FB5C82541EB880024DDC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C62541EB880024DDC4 /* Main.storyboard */; };
 		6B5FB5CA2541EB8F0024DDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C92541EB8F0024DDC4 /* Assets.xcassets */; };
 		6B5FB5CD2541EB8F0024DDC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5FB5CB2541EB8F0024DDC4 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		6B5FB5BD2541EB880024DDC4 /* Breweries list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breweries list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5FB5C02541EB880024DDC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B5FB5C22541EB880024DDC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6B5FB5C42541EB880024DDC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B5FB5C42541EB880024DDC4 /* BreweriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesListViewController.swift; sourceTree = "<group>"; };
 		6B5FB5C72541EB880024DDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B5FB5C92541EB8F0024DDC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B5FB5CC2541EB8F0024DDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,13 +58,29 @@
 			children = (
 				6B5FB5C02541EB880024DDC4 /* AppDelegate.swift */,
 				6B5FB5C22541EB880024DDC4 /* SceneDelegate.swift */,
-				6B5FB5C42541EB880024DDC4 /* ViewController.swift */,
+				6B5FB5D52541ECA00024DDC4 /* Scenes */,
 				6B5FB5C62541EB880024DDC4 /* Main.storyboard */,
 				6B5FB5C92541EB8F0024DDC4 /* Assets.xcassets */,
 				6B5FB5CB2541EB8F0024DDC4 /* LaunchScreen.storyboard */,
 				6B5FB5CE2541EB8F0024DDC4 /* Info.plist */,
 			);
 			path = "Breweries list";
+			sourceTree = "<group>";
+		};
+		6B5FB5D42541EC810024DDC4 /* BreweriesList */ = {
+			isa = PBXGroup;
+			children = (
+				6B5FB5C42541EB880024DDC4 /* BreweriesListViewController.swift */,
+			);
+			path = BreweriesList;
+			sourceTree = "<group>";
+		};
+		6B5FB5D52541ECA00024DDC4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6B5FB5D42541EC810024DDC4 /* BreweriesList */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B5FB5C52541EB880024DDC4 /* ViewController.swift in Sources */,
+				6B5FB5C52541EB880024DDC4 /* BreweriesListViewController.swift in Sources */,
 				6B5FB5C12541EB880024DDC4 /* AppDelegate.swift in Sources */,
 				6B5FB5C32541EB880024DDC4 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BreweriesListViewController.swift
 //  Breweries list
 //
 //  Created by Tarasenko Jurik on 22.10.2020.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BreweriesListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .green
+        
     }
 
 
