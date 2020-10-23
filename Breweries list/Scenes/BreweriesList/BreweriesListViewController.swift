@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 final class BreweriesListViewController: BaseViewController {
     
@@ -112,7 +113,13 @@ extension BreweriesListViewController: UITableViewDataSource {
             print(self?.currentData[indexPath.row].latitude, self?.currentData[indexPath.row].longitude)
         }
         cell.webSiteDidTap = { [weak self] urlString in
-            print(urlString)
+            guard let self = self,
+                let url = URL(string: urlString) else {
+                return
+            }
+            let safariVC = SFSafariViewController(url: url)
+            self.present(safariVC, animated: true, completion: nil)
+            safariVC.delegate = self
         }
         return cell
     }
@@ -122,4 +129,12 @@ extension BreweriesListViewController: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension BreweriesListViewController: UITableViewDelegate {
     
+}
+
+//MARK: - SFSafariViewControllerDelegate
+extension BreweriesListViewController: SFSafariViewControllerDelegate {
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 }
