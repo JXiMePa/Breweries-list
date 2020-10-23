@@ -13,6 +13,7 @@ final class Brewery: Object, Codable, RealmObject {
     
     @objc dynamic var id = Int()
     @objc dynamic var name = String()
+    @objc dynamic var street = String()
     @objc dynamic var city = String()
     @objc dynamic var state = String()
     @objc dynamic var country = String()
@@ -26,6 +27,7 @@ final class Brewery: Object, Codable, RealmObject {
     func update<T>(with item: T, in realm: Realm) -> T where T: Object, T : RealmObject {
         guard let updatedItem = item as? Brewery else { return item }
         self.name = updatedItem.name
+        self.street = updatedItem.street
         self.city = updatedItem.city
         self.state = updatedItem.state
         self.country = updatedItem.country

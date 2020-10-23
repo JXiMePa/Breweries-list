@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import JGProgressHUD
 
 class BaseViewController: UIViewController {
     

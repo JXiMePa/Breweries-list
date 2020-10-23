@@ -31,7 +31,7 @@ final class RealmManager<T: Object & RealmObject> {
         return updatedObject
     }
     
-    static func allObjects() -> [T]? {
+    static func allObjects() -> [T] {
         let realm = try! Realm()
         return realm.objects(T.self).map {$0}
     }
