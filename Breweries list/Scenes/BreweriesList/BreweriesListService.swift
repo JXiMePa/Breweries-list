@@ -10,14 +10,15 @@ import Foundation
 
 struct BreweriesListService {
     
-    static func getData(_ completion: @escaping (Result<[Brewery], Error>) -> Void) {
-        NetworkController.get(endpoint: "breweries") { result in
+    static func getData(searchName: String = "", completion: @escaping (Result<[Brewery], Error>) -> Void) {
+        let searchEndpoint = "breweries?by_name=\(searchName.replacingOccurrences(of: " ", with: "%20"))"
+        let endpoint = searchName == "" ? "breweries" : searchEndpoint
+        NetworkController.get(endpoint: endpoint) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let data):
                     do {
                         let models = try JSONDecoder.mainDecoder.decode([Brewery].self, from: data)
-                        RealmManager<Brewery>.deleteAllObjects()
                         let realmModels = models.map { RealmManager<Brewery>.toRealm($0) }
                         completion(.success(realmModels))
                     } catch (let error) {

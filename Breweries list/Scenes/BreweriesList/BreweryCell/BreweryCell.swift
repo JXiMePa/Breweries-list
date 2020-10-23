@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MapKit
 
 final class BreweryCell: UITableViewCell {
     
@@ -22,34 +21,46 @@ final class BreweryCell: UITableViewCell {
     @IBOutlet private weak var streetLabel: UILabel!
     @IBOutlet private weak var streetStack: UIStackView!
     @IBOutlet private weak var showOnMapButton: UIButton!
+    @IBOutlet private weak var showOnMapUnderView: UIView!
+    @IBOutlet private weak var webSiteButton: UnderlineTextButton!
+    @IBOutlet private weak var webSiteStackView: UIStackView!
     
-    private var location = CLLocationCoordinate2D()
+    //MARK: - Property
+    var showOnMapDidTap: (() -> Void)?
+    var webSiteDidTap:  ((String) -> Void)?
+    private var webSiteUrl: String?
 
     override func prepareForReuse() {
         super.prepareForReuse()
         [nameLabel, countryLabel, stateLabel, cityLabel, streetLabel].forEach { $0?.text = "" }
+        webSiteButton.setTitle("", for: .normal)
     }
     
     func configure(_ model: Brewery) {
-        var model = model
-        model.country = ""
         nameLabel.text = model.name
         countryLabel.text = model.country
-        countryStack.isHidden = model.country == String()
+        countryStack.isHidden = model.country == nil
         stateLabel.text = model.state
-        stateStack.isHidden = model.state == String()
+        stateStack.isHidden = model.state == nil
         cityLabel.text = model.city
-        cityStack.isHidden = model.city == String()
+        cityStack.isHidden = model.city == nil
         streetLabel.text = model.street
-        stateStack.isHidden = model.street == String()
-        if let latitude = Double(model.latitude),
-            let longitude = Double(model.longitude) {
-            location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        }
+        streetStack.isHidden = model.street == nil
+        showOnMapUnderView.isHidden = model.longitude == nil && model.latitude == nil
+        webSiteButton.setTitle(model.websiteUrl, for: .normal)
+        webSiteStackView.isHidden = model.websiteUrl == nil
+        webSiteUrl = model.websiteUrl
     }
     
     @IBAction func showOnMapAction(_ sender: UIButton) {
-        print(#function)
+        showOnMapDidTap?()
+    }
+    
+    @IBAction func webSiteAction(_ sender: UIButton) {
+        guard let urlString = webSiteUrl else {
+            return
+        }
+        webSiteDidTap?(urlString)
     }
     
 }

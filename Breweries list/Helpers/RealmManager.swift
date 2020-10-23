@@ -35,11 +35,5 @@ final class RealmManager<T: Object & RealmObject> {
         let realm = try! Realm()
         return realm.objects(T.self).map {$0}
     }
-    
-    static func deleteAllObjects() {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.delete(realm.objects(T.self))
-        }
-    }
+
 }

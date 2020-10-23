@@ -18,6 +18,12 @@ final class BreweriesListViewController: BaseViewController {
     private var breweries = [Brewery]() {
         didSet { tableView.reloadData() }
     }
+    private var breweriesSearchResult = [Brewery]() {
+        didSet { tableView.reloadData() }
+    }
+    private var currentData: [Brewery] {
+        return breweriesSearchResult.isEmpty ? breweries : breweriesSearchResult
+    }
     private var refreshControl: UIRefreshControl?
     
     //MARK: - Life cycle
@@ -29,6 +35,9 @@ final class BreweriesListViewController: BaseViewController {
     }
     
     private func setupUI() {
+        if #available(iOS 13.0, *) {
+           searchBar.searchTextField.backgroundColor = .white
+        }
         breweries = RealmManager<Brewery>.allObjects()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 160
@@ -64,7 +73,27 @@ final class BreweriesListViewController: BaseViewController {
 extension BreweriesListViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        if searchText == "" {
+            breweriesSearchResult.removeAll()
+        }
+        
+        guard Connectivity.isConnectedToInternet() else {
+            breweriesSearchResult = breweries.filter({ brewery -> Bool in
+                return brewery.name?.contains(searchText) ?? false
+            })
+            return
+        }
+        
+        BreweriesListService.getData(searchName: searchText) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let models):
+                self.breweriesSearchResult = models
+            case .failure(let error):
+                self.showAlert()
+                print(error)
+            }
+        }
     }
 }
 
@@ -72,12 +101,19 @@ extension BreweriesListViewController: UISearchBarDelegate {
 extension BreweriesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return breweries.count
+        return currentData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BreweryCell.identifier, for: indexPath) as! BreweryCell
-        cell.configure(breweries[indexPath.row])
+        cell.configure(currentData[indexPath.row])
+
+        cell.showOnMapDidTap = { [weak self] in
+            print(self?.currentData[indexPath.row].latitude, self?.currentData[indexPath.row].longitude)
+        }
+        cell.webSiteDidTap = { [weak self] urlString in
+            print(urlString)
+        }
         return cell
     }
     

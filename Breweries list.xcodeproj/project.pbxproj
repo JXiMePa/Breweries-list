@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		616437A002B654744C19C58C /* Pods_Breweries_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B551369DBAEAE8C64033B2 /* Pods_Breweries_list.framework */; };
+		6B5B3BCD2543149E00B940C0 /* UnderlineTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5B3BCC2543149E00B940C0 /* UnderlineTextButton.swift */; };
 		6B5FB5C12541EB880024DDC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C02541EB880024DDC4 /* AppDelegate.swift */; };
 		6B5FB5C32541EB880024DDC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C22541EB880024DDC4 /* SceneDelegate.swift */; };
 		6B5FB5C52541EB880024DDC4 /* BreweriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C42541EB880024DDC4 /* BreweriesListViewController.swift */; };
 		6B5FB5C82541EB880024DDC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C62541EB880024DDC4 /* Main.storyboard */; };
 		6B5FB5CA2541EB8F0024DDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C92541EB8F0024DDC4 /* Assets.xcassets */; };
 		6B5FB5CD2541EB8F0024DDC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5FB5CB2541EB8F0024DDC4 /* LaunchScreen.storyboard */; };
+		6B85D3EB2542FA2F00CB300A /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B85D3EA2542FA2F00CB300A /* Connectivity.swift */; };
 		6BF525062541F20D007196F8 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF525052541F20D007196F8 /* Brewery.swift */; };
 		6BF525092541F82B007196F8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF525082541F82B007196F8 /* BaseViewController.swift */; };
 		6BF5250B2541F9A7007196F8 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5250A2541F9A7007196F8 /* RealmManager.swift */; };
@@ -33,6 +35,7 @@
 /* Begin PBXFileReference section */
 		11B551369DBAEAE8C64033B2 /* Pods_Breweries_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breweries_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		334F834E51C9718CB989B925 /* Pods-Breweries list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breweries list.release.xcconfig"; path = "Target Support Files/Pods-Breweries list/Pods-Breweries list.release.xcconfig"; sourceTree = "<group>"; };
+		6B5B3BCC2543149E00B940C0 /* UnderlineTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextButton.swift; sourceTree = "<group>"; };
 		6B5FB5BD2541EB880024DDC4 /* Breweries list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breweries list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5FB5C02541EB880024DDC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B5FB5C22541EB880024DDC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +44,7 @@
 		6B5FB5C92541EB8F0024DDC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B5FB5CC2541EB8F0024DDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B5FB5CE2541EB8F0024DDC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B85D3EA2542FA2F00CB300A /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		6BF525052541F20D007196F8 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
 		6BF525082541F82B007196F8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6BF5250A2541F9A7007196F8 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 			children = (
 				6BF5250A2541F9A7007196F8 /* RealmManager.swift */,
 				6BF5250F25420185007196F8 /* NetworkController.swift */,
+				6B85D3EA2542FA2F00CB300A /* Connectivity.swift */,
+				6B5B3BCC2543149E00B940C0 /* UnderlineTextButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -299,6 +305,8 @@
 			files = (
 				6BF525122542040F007196F8 /* NSObject+Extensions.swift in Sources */,
 				6BF5251025420185007196F8 /* NetworkController.swift in Sources */,
+				6B85D3EB2542FA2F00CB300A /* Connectivity.swift in Sources */,
+				6B5B3BCD2543149E00B940C0 /* UnderlineTextButton.swift in Sources */,
 				6BF525092541F82B007196F8 /* BaseViewController.swift in Sources */,
 				6BF5250E2541FA43007196F8 /* RealmObject.swift in Sources */,
 				6BF5251F2542C0D9007196F8 /* BreweriesListService.swift in Sources */,

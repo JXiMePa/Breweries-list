@@ -8,19 +8,20 @@
 
 import Foundation
 import RealmSwift
+import MapKit
 
 final class Brewery: Object, Codable, RealmObject {
     
     @objc dynamic var id = Int()
-    @objc dynamic var name = String()
-    @objc dynamic var street = String()
-    @objc dynamic var city = String()
-    @objc dynamic var state = String()
-    @objc dynamic var country = String()
-    @objc dynamic var longitude = String()
-    @objc dynamic var latitude = String()
-    @objc dynamic var phone = String()
-    @objc dynamic var websiteUrl = String()
+    @objc dynamic var name: String?
+    @objc dynamic var street: String?
+    @objc dynamic var city: String?
+    @objc dynamic var state: String?
+    @objc dynamic var country: String?
+    @objc dynamic var longitude: String?
+    @objc dynamic var latitude: String?
+    @objc dynamic var phone: String?
+    @objc dynamic var websiteUrl: String?
     
     override class func primaryKey() -> String? { return "id" }
     
