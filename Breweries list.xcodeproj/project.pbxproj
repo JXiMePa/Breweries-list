@@ -3,19 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		616437A002B654744C19C58C /* Pods_Breweries_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B551369DBAEAE8C64033B2 /* Pods_Breweries_list.framework */; };
 		6B5FB5C12541EB880024DDC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C02541EB880024DDC4 /* AppDelegate.swift */; };
 		6B5FB5C32541EB880024DDC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C22541EB880024DDC4 /* SceneDelegate.swift */; };
 		6B5FB5C52541EB880024DDC4 /* BreweriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C42541EB880024DDC4 /* BreweriesListViewController.swift */; };
 		6B5FB5C82541EB880024DDC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C62541EB880024DDC4 /* Main.storyboard */; };
 		6B5FB5CA2541EB8F0024DDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C92541EB8F0024DDC4 /* Assets.xcassets */; };
 		6B5FB5CD2541EB8F0024DDC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5FB5CB2541EB8F0024DDC4 /* LaunchScreen.storyboard */; };
+		6BF525062541F20D007196F8 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF525052541F20D007196F8 /* Brewery.swift */; };
+		6BF525092541F82B007196F8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF525082541F82B007196F8 /* BaseViewController.swift */; };
+		6BF5250B2541F9A7007196F8 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5250A2541F9A7007196F8 /* RealmManager.swift */; };
+		6BF5250E2541FA43007196F8 /* RealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5250D2541FA43007196F8 /* RealmObject.swift */; };
+		6BF5251025420185007196F8 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5250F25420185007196F8 /* NetworkController.swift */; };
+		6BF525122542040F007196F8 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF525112542040F007196F8 /* NSObject+Extensions.swift */; };
+		6BF5251525420430007196F8 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5251425420430007196F8 /* Data+Extensions.swift */; };
+		6BF525172542044C007196F8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF525162542044C007196F8 /* UIViewController+Extensions.swift */; };
+		6BF5251925420488007196F8 /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5251825420488007196F8 /* JSONDecoder+Extension.swift */; };
+		6BF5251B254204D1007196F8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5251A254204D1007196F8 /* UIView+Extensions.swift */; };
+		6BF5251D254204EA007196F8 /* UIView+XibSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5251C254204EA007196F8 /* UIView+XibSetup.swift */; };
+		6BF5251F2542C0D9007196F8 /* BreweriesListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5251E2542C0D9007196F8 /* BreweriesListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11B551369DBAEAE8C64033B2 /* Pods_Breweries_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breweries_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		334F834E51C9718CB989B925 /* Pods-Breweries list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breweries list.release.xcconfig"; path = "Target Support Files/Pods-Breweries list/Pods-Breweries list.release.xcconfig"; sourceTree = "<group>"; };
 		6B5FB5BD2541EB880024DDC4 /* Breweries list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breweries list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5FB5C02541EB880024DDC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B5FB5C22541EB880024DDC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +39,19 @@
 		6B5FB5C92541EB8F0024DDC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B5FB5CC2541EB8F0024DDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B5FB5CE2541EB8F0024DDC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BF525052541F20D007196F8 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
+		6BF525082541F82B007196F8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6BF5250A2541F9A7007196F8 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		6BF5250D2541FA43007196F8 /* RealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObject.swift; sourceTree = "<group>"; };
+		6BF5250F25420185007196F8 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		6BF525112542040F007196F8 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		6BF5251425420430007196F8 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		6BF525162542044C007196F8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		6BF5251825420488007196F8 /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
+		6BF5251A254204D1007196F8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		6BF5251C254204EA007196F8 /* UIView+XibSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XibSetup.swift"; sourceTree = "<group>"; };
+		6BF5251E2542C0D9007196F8 /* BreweriesListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesListService.swift; sourceTree = "<group>"; };
+		E90E54EE1B003FB52F5B457D /* Pods-Breweries list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breweries list.debug.xcconfig"; path = "Target Support Files/Pods-Breweries list/Pods-Breweries list.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +59,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				616437A002B654744C19C58C /* Pods_Breweries_list.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50F5BECCCEDD28C4079282A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E90E54EE1B003FB52F5B457D /* Pods-Breweries list.debug.xcconfig */,
+				334F834E51C9718CB989B925 /* Pods-Breweries list.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6B5FB5B42541EB880024DDC4 = {
 			isa = PBXGroup;
 			children = (
 				6B5FB5BF2541EB880024DDC4 /* Breweries list */,
 				6B5FB5BE2541EB880024DDC4 /* Products */,
+				50F5BECCCEDD28C4079282A6 /* Pods */,
+				8F0824BE557431F3118D0C25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +98,14 @@
 			children = (
 				6B5FB5C02541EB880024DDC4 /* AppDelegate.swift */,
 				6B5FB5C22541EB880024DDC4 /* SceneDelegate.swift */,
+				6BF525072541F213007196F8 /* Models */,
 				6B5FB5D52541ECA00024DDC4 /* Scenes */,
 				6B5FB5C62541EB880024DDC4 /* Main.storyboard */,
 				6B5FB5C92541EB8F0024DDC4 /* Assets.xcassets */,
 				6B5FB5CB2541EB8F0024DDC4 /* LaunchScreen.storyboard */,
 				6B5FB5CE2541EB8F0024DDC4 /* Info.plist */,
+				6BF5250C2541F9BB007196F8 /* Helpers */,
+				6BF5251325420413007196F8 /* Extensions */,
 			);
 			path = "Breweries list";
 			sourceTree = "<group>";
@@ -71,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				6B5FB5C42541EB880024DDC4 /* BreweriesListViewController.swift */,
+				6BF5251E2542C0D9007196F8 /* BreweriesListService.swift */,
 			);
 			path = BreweriesList;
 			sourceTree = "<group>";
@@ -78,9 +122,49 @@
 		6B5FB5D52541ECA00024DDC4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6BF525082541F82B007196F8 /* BaseViewController.swift */,
 				6B5FB5D42541EC810024DDC4 /* BreweriesList */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		6BF525072541F213007196F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6BF5250D2541FA43007196F8 /* RealmObject.swift */,
+				6BF525052541F20D007196F8 /* Brewery.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6BF5250C2541F9BB007196F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6BF5250A2541F9A7007196F8 /* RealmManager.swift */,
+				6BF5250F25420185007196F8 /* NetworkController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6BF5251325420413007196F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6BF525112542040F007196F8 /* NSObject+Extensions.swift */,
+				6BF5251425420430007196F8 /* Data+Extensions.swift */,
+				6BF525162542044C007196F8 /* UIViewController+Extensions.swift */,
+				6BF5251825420488007196F8 /* JSONDecoder+Extension.swift */,
+				6BF5251A254204D1007196F8 /* UIView+Extensions.swift */,
+				6BF5251C254204EA007196F8 /* UIView+XibSetup.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8F0824BE557431F3118D0C25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11B551369DBAEAE8C64033B2 /* Pods_Breweries_list.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B5FB5D12541EB8F0024DDC4 /* Build configuration list for PBXNativeTarget "Breweries list" */;
 			buildPhases = (
+				E55893C83552565B382C75F3 /* [CP] Check Pods Manifest.lock */,
 				6B5FB5B92541EB880024DDC4 /* Sources */,
 				6B5FB5BA2541EB880024DDC4 /* Frameworks */,
 				6B5FB5BB2541EB880024DDC4 /* Resources */,
+				EAD26072AC8717161DACDE57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,14 +235,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E55893C83552565B382C75F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Breweries list-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAD26072AC8717161DACDE57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breweries list/Pods-Breweries list-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breweries list/Pods-Breweries list-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Breweries list/Pods-Breweries list-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6B5FB5B92541EB880024DDC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF525122542040F007196F8 /* NSObject+Extensions.swift in Sources */,
+				6BF5251025420185007196F8 /* NetworkController.swift in Sources */,
+				6BF525092541F82B007196F8 /* BaseViewController.swift in Sources */,
+				6BF5250E2541FA43007196F8 /* RealmObject.swift in Sources */,
+				6BF5251F2542C0D9007196F8 /* BreweriesListService.swift in Sources */,
+				6BF5251D254204EA007196F8 /* UIView+XibSetup.swift in Sources */,
+				6BF525062541F20D007196F8 /* Brewery.swift in Sources */,
+				6BF5251B254204D1007196F8 /* UIView+Extensions.swift in Sources */,
 				6B5FB5C52541EB880024DDC4 /* BreweriesListViewController.swift in Sources */,
+				6BF5251925420488007196F8 /* JSONDecoder+Extension.swift in Sources */,
+				6BF525172542044C007196F8 /* UIViewController+Extensions.swift in Sources */,
 				6B5FB5C12541EB880024DDC4 /* AppDelegate.swift in Sources */,
 				6B5FB5C32541EB880024DDC4 /* SceneDelegate.swift in Sources */,
+				6BF5250B2541F9A7007196F8 /* RealmManager.swift in Sources */,
+				6BF5251525420430007196F8 /* Data+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +438,7 @@
 		};
 		6B5FB5D22541EB8F0024DDC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E90E54EE1B003FB52F5B457D /* Pods-Breweries list.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +457,7 @@
 		};
 		6B5FB5D32541EB8F0024DDC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 334F834E51C9718CB989B925 /* Pods-Breweries list.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
