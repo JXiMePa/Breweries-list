@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		616437A002B654744C19C58C /* Pods_Breweries_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B551369DBAEAE8C64033B2 /* Pods_Breweries_list.framework */; };
 		6B5B3BCD2543149E00B940C0 /* UnderlineTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5B3BCC2543149E00B940C0 /* UnderlineTextButton.swift */; };
+		6B5B3BCF25431A2700B940C0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5B3BCE25431A2700B940C0 /* MapViewController.swift */; };
+		6B5B3BD225431A4E00B940C0 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5B3BD125431A4E00B940C0 /* Map.storyboard */; };
+		6B5B3BD425431C1F00B940C0 /* Storyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5B3BD325431C1F00B940C0 /* Storyboard+Extensions.swift */; };
 		6B5FB5C12541EB880024DDC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C02541EB880024DDC4 /* AppDelegate.swift */; };
 		6B5FB5C32541EB880024DDC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C22541EB880024DDC4 /* SceneDelegate.swift */; };
 		6B5FB5C52541EB880024DDC4 /* BreweriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5FB5C42541EB880024DDC4 /* BreweriesListViewController.swift */; };
@@ -22,11 +25,9 @@
 		6BF5250E2541FA43007196F8 /* RealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5250D2541FA43007196F8 /* RealmObject.swift */; };
 		6BF5251025420185007196F8 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5250F25420185007196F8 /* NetworkController.swift */; };
 		6BF525122542040F007196F8 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF525112542040F007196F8 /* NSObject+Extensions.swift */; };
-		6BF5251525420430007196F8 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5251425420430007196F8 /* Data+Extensions.swift */; };
 		6BF525172542044C007196F8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF525162542044C007196F8 /* UIViewController+Extensions.swift */; };
 		6BF5251925420488007196F8 /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5251825420488007196F8 /* JSONDecoder+Extension.swift */; };
 		6BF5251B254204D1007196F8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5251A254204D1007196F8 /* UIView+Extensions.swift */; };
-		6BF5251D254204EA007196F8 /* UIView+XibSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5251C254204EA007196F8 /* UIView+XibSetup.swift */; };
 		6BF5251F2542C0D9007196F8 /* BreweriesListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5251E2542C0D9007196F8 /* BreweriesListService.swift */; };
 		6BF525222542C95B007196F8 /* BreweryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF525202542C95B007196F8 /* BreweryCell.swift */; };
 		6BF525232542C95B007196F8 /* BreweryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF525212542C95B007196F8 /* BreweryCell.xib */; };
@@ -36,6 +37,9 @@
 		11B551369DBAEAE8C64033B2 /* Pods_Breweries_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breweries_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		334F834E51C9718CB989B925 /* Pods-Breweries list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breweries list.release.xcconfig"; path = "Target Support Files/Pods-Breweries list/Pods-Breweries list.release.xcconfig"; sourceTree = "<group>"; };
 		6B5B3BCC2543149E00B940C0 /* UnderlineTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextButton.swift; sourceTree = "<group>"; };
+		6B5B3BCE25431A2700B940C0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6B5B3BD125431A4E00B940C0 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		6B5B3BD325431C1F00B940C0 /* Storyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extensions.swift"; sourceTree = "<group>"; };
 		6B5FB5BD2541EB880024DDC4 /* Breweries list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breweries list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5FB5C02541EB880024DDC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B5FB5C22541EB880024DDC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,11 +55,9 @@
 		6BF5250D2541FA43007196F8 /* RealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObject.swift; sourceTree = "<group>"; };
 		6BF5250F25420185007196F8 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		6BF525112542040F007196F8 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
-		6BF5251425420430007196F8 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		6BF525162542044C007196F8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		6BF5251825420488007196F8 /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
 		6BF5251A254204D1007196F8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		6BF5251C254204EA007196F8 /* UIView+XibSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XibSetup.swift"; sourceTree = "<group>"; };
 		6BF5251E2542C0D9007196F8 /* BreweriesListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesListService.swift; sourceTree = "<group>"; };
 		6BF525202542C95B007196F8 /* BreweryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryCell.swift; sourceTree = "<group>"; };
 		6BF525212542C95B007196F8 /* BreweryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreweryCell.xib; sourceTree = "<group>"; };
@@ -81,6 +83,15 @@
 				334F834E51C9718CB989B925 /* Pods-Breweries list.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6B5B3BD025431A2A00B940C0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6B5B3BCE25431A2700B940C0 /* MapViewController.swift */,
+				6B5B3BD125431A4E00B940C0 /* Map.storyboard */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		6B5FB5B42541EB880024DDC4 = {
@@ -133,6 +144,7 @@
 			children = (
 				6BF525082541F82B007196F8 /* BaseViewController.swift */,
 				6B5FB5D42541EC810024DDC4 /* BreweriesList */,
+				6B5B3BD025431A2A00B940C0 /* Map */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -161,11 +173,10 @@
 			isa = PBXGroup;
 			children = (
 				6BF525112542040F007196F8 /* NSObject+Extensions.swift */,
-				6BF5251425420430007196F8 /* Data+Extensions.swift */,
 				6BF525162542044C007196F8 /* UIViewController+Extensions.swift */,
 				6BF5251825420488007196F8 /* JSONDecoder+Extension.swift */,
 				6BF5251A254204D1007196F8 /* UIView+Extensions.swift */,
-				6BF5251C254204EA007196F8 /* UIView+XibSetup.swift */,
+				6B5B3BD325431C1F00B940C0 /* Storyboard+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 			files = (
 				6BF525232542C95B007196F8 /* BreweryCell.xib in Resources */,
 				6B5FB5CD2541EB8F0024DDC4 /* LaunchScreen.storyboard in Resources */,
+				6B5B3BD225431A4E00B940C0 /* Map.storyboard in Resources */,
 				6B5FB5CA2541EB8F0024DDC4 /* Assets.xcassets in Resources */,
 				6B5FB5C82541EB880024DDC4 /* Main.storyboard in Resources */,
 			);
@@ -309,8 +321,9 @@
 				6B5B3BCD2543149E00B940C0 /* UnderlineTextButton.swift in Sources */,
 				6BF525092541F82B007196F8 /* BaseViewController.swift in Sources */,
 				6BF5250E2541FA43007196F8 /* RealmObject.swift in Sources */,
+				6B5B3BD425431C1F00B940C0 /* Storyboard+Extensions.swift in Sources */,
 				6BF5251F2542C0D9007196F8 /* BreweriesListService.swift in Sources */,
-				6BF5251D254204EA007196F8 /* UIView+XibSetup.swift in Sources */,
+				6B5B3BCF25431A2700B940C0 /* MapViewController.swift in Sources */,
 				6BF525062541F20D007196F8 /* Brewery.swift in Sources */,
 				6BF5251B254204D1007196F8 /* UIView+Extensions.swift in Sources */,
 				6B5FB5C52541EB880024DDC4 /* BreweriesListViewController.swift in Sources */,
@@ -320,7 +333,6 @@
 				6BF525222542C95B007196F8 /* BreweryCell.swift in Sources */,
 				6B5FB5C32541EB880024DDC4 /* SceneDelegate.swift in Sources */,
 				6BF5250B2541F9A7007196F8 /* RealmManager.swift in Sources */,
-				6BF5251525420430007196F8 /* Data+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

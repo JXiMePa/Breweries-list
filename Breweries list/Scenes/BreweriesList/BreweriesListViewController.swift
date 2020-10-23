@@ -110,7 +110,9 @@ extension BreweriesListViewController: UITableViewDataSource {
         cell.configure(currentData[indexPath.row])
 
         cell.showOnMapDidTap = { [weak self] in
-            print(self?.currentData[indexPath.row].latitude, self?.currentData[indexPath.row].longitude)
+            guard let self = self else { return }
+            let mapViewController = MapViewController.instance(.map)
+            self.navigationController?.pushViewController(mapViewController, animated: true)
         }
         cell.webSiteDidTap = { [weak self] urlString in
             guard let self = self,
