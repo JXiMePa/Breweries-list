@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -297,11 +297,9 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Breweries list/Pods-Breweries list-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Breweries list/Pods-Breweries list-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -360,6 +358,7 @@
 /* Begin XCBuildConfiguration section */
 		6B5FB5CF2541EB8F0024DDC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E90E54EE1B003FB52F5B457D /* Pods-Breweries list.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -420,6 +419,7 @@
 		};
 		6B5FB5D02541EB8F0024DDC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 334F834E51C9718CB989B925 /* Pods-Breweries list.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

@@ -42,8 +42,12 @@ struct NetworkController {
             let body = try? JSONSerialization.data(withJSONObject: params) {
             request.httpBody = body
         }
-        
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let urlConfig = URLSessionConfiguration.default
+        urlConfig.requestCachePolicy = .reloadIgnoringLocalCacheData
+        urlConfig.urlCache = nil
+
+        let session = URLSession(configuration: urlConfig)
+        let task = session.dataTask(with: request) { (data, response, error) in
             if error != nil {
                 callback(.failure(.invalidResponse))
                 return

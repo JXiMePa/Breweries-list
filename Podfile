@@ -5,4 +5,6 @@ inhibit_all_warnings!
 
 target "Breweries list" do
     pod 'RealmSwift'
+    pod 'JGProgressHUD'
+    pod 'Alamofire'
 end

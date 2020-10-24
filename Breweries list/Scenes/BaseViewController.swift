@@ -7,7 +7,25 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class BaseViewController: UIViewController {
     
+    //MARK: - Property
+    var refreshControl: UIRefreshControl?
+    let hud = JGProgressHUD(style: .dark)
+
+    //MARK: - RefreshControl
+    func setupRefreshControl(_ tableView: UITableView) {
+        refreshControl = UIRefreshControl()
+        if let refreshControl = refreshControl {
+            refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
+            tableView.addSubview(refreshControl)
+        }
+    }
+    
+    //MARK: - Load Data
+    @objc func loadData() {
+        
+    }
 }

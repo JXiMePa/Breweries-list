@@ -25,16 +25,16 @@ final class BreweriesListViewController: BaseViewController {
     private var currentData: [Brewery] {
         return breweriesSearchResult.isEmpty ? breweries : breweriesSearchResult
     }
-    private var refreshControl: UIRefreshControl?
     
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
         setupUI()
-        setupRefreshControl()
+        setupRefreshControl(tableView)
     }
     
+    //MARK: - Func
     private func setupUI() {
         if #available(iOS 13.0, *) {
            searchBar.searchTextField.backgroundColor = .white
@@ -46,15 +46,13 @@ final class BreweriesListViewController: BaseViewController {
         tableView.refreshControl = refreshControl
     }
     
-    private func setupRefreshControl() {
-        refreshControl = UIRefreshControl()
-        if let refreshControl = refreshControl {
-            refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
-            tableView.addSubview(refreshControl)
+    @objc override func loadData() {
+        guard Connectivity.isConnectedToInternet() else {
+            showAlert("No internet connection", message: "Application working in offline mode. Please check your internet connection and pull reload.", completion: { [weak self] in
+                self?.refreshControl?.endRefreshing()
+            })
+            return
         }
-    }
-    
-    @objc private func loadData() {
         BreweriesListService.getData { [weak self] result in
             guard let self = self else { return }
             self.refreshControl?.endRefreshing()
@@ -63,11 +61,10 @@ final class BreweriesListViewController: BaseViewController {
                 self.breweries = models
             case .failure(let error):
                 self.showAlert()
-                print(error)
+                print(error.localizedDescription)
             }
         }
     }
-    
 }
 
 //MARK: - UISearchBarDelegate
@@ -84,9 +81,11 @@ extension BreweriesListViewController: UISearchBarDelegate {
             })
             return
         }
-        
-        BreweriesListService.getData(searchName: searchText) { [weak self] result in
+        let cleanSearchText = searchText.replacingOccurrences(of: "[^A-Za-z0-9]+", with: "", options: [.regularExpression])
+        hud.show(in: view)
+        BreweriesListService.getData(searchName: cleanSearchText) { [weak self] result in
             guard let self = self else { return }
+            self.hud.dismiss()
             switch result {
             case .success(let models):
                 self.breweriesSearchResult = models
@@ -112,6 +111,7 @@ extension BreweriesListViewController: UITableViewDataSource {
         cell.showOnMapDidTap = { [weak self] in
             guard let self = self else { return }
             let mapViewController = MapViewController.instance(.map)
+            mapViewController.brewery = self.currentData[indexPath.row]
             self.navigationController?.pushViewController(mapViewController, animated: true)
         }
         cell.webSiteDidTap = { [weak self] urlString in

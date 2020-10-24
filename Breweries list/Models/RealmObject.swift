@@ -16,10 +16,3 @@ protocol RealmObject {
     
     @discardableResult func update<T: Object & RealmObject>(with item: T, in realm: Realm) -> T
 }
-
-extension RealmObject {
-
-    static func == (left: RealmObject, right: RealmObject) -> Bool {
-        return left.id == right.id
-    }
-}

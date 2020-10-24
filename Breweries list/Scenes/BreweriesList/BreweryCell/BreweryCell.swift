@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 final class BreweryCell: UITableViewCell {
     
@@ -39,17 +40,17 @@ final class BreweryCell: UITableViewCell {
     func configure(_ model: Brewery) {
         nameLabel.text = model.name
         countryLabel.text = model.country
-        countryStack.isHidden = model.country == nil
         stateLabel.text = model.state
-        stateStack.isHidden = model.state == nil
         cityLabel.text = model.city
-        cityStack.isHidden = model.city == nil
         streetLabel.text = model.street
-        streetStack.isHidden = model.street == nil
-        showOnMapUnderView.isHidden = model.longitude == nil && model.latitude == nil
-        webSiteButton.setTitle(model.websiteUrl, for: .normal)
-        webSiteStackView.isHidden = model.websiteUrl == nil
         webSiteUrl = model.websiteUrl
+        webSiteButton.setTitle(model.websiteUrl, for: .normal)
+        showOnMapUnderView.isHidden = model.longitude?.isEmpty ?? true && model.latitude?.isEmpty ?? true
+        countryStack.isHidden = model.country?.isEmpty ?? true
+        stateStack.isHidden = model.state?.isEmpty ?? true
+        cityStack.isHidden = model.city?.isEmpty ?? true
+        streetStack.isHidden = model.street?.isEmpty ?? true
+        webSiteStackView.isHidden = model.websiteUrl?.isEmpty ?? true
     }
     
     @IBAction func showOnMapAction(_ sender: UIButton) {
@@ -62,5 +63,4 @@ final class BreweryCell: UITableViewCell {
         }
         webSiteDidTap?(urlString)
     }
-    
 }
